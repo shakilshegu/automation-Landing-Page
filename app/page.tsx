@@ -177,7 +177,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                TaskJamm has transformed how our marketing team operates. We&apos;ve automated 80% of our repetitive tasks and can now focus on strategy and creativity.
+                As an early adopter, I&apos;m impressed with TaskJamm&apos;s potential. The AI automation is already helping me streamline my daily workflows and save valuable time.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-automation to-automation-light rounded-full flex items-center justify-center text-white font-bold">
@@ -185,7 +185,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Sarah Johnson</div>
-                  <div className="text-gray-400 text-sm">Marketing Director, TechCorp</div>
+                  <div className="text-gray-400 text-sm">Marketing Specialist</div>
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                The ROI has been incredible. We&apos;ve cut manual processing time by 75% and our team is happier focusing on high-value work instead of repetitive tasks.
+                TaskJamm shows great promise for automating repetitive work. I&apos;m excited to see how it evolves and helps streamline my business operations.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-secondary to-automation rounded-full flex items-center justify-center text-white font-bold">
@@ -208,7 +208,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Michael Chen</div>
-                  <div className="text-gray-400 text-sm">Operations Manager, GrowthLabs</div>
+                  <div className="text-gray-400 text-sm">Small Business Owner</div>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Setup was incredibly easy, and the support team has been amazing. We went from zero to fully automated workflows in just two weeks.
+                The interface is intuitive and the AI features are impressive for a new platform. Looking forward to seeing TaskJamm grow and add more capabilities.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-automation to-automation-light rounded-full flex items-center justify-center text-white font-bold">
@@ -231,7 +231,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Emily Parker</div>
-                  <div className="text-gray-400 text-sm">CEO, StartupHub</div>
+                  <div className="text-gray-400 text-sm">Freelance Consultant</div>
                 </div>
               </div>
             </div>
