@@ -177,7 +177,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                TaskJamm has transformed how our marketing team operates. We've automated 80% of our repetitive tasks and can now focus on strategy and creativity.
+                TaskJamm has transformed how our marketing team operates. We&apos;ve automated 80% of our repetitive tasks and can now focus on strategy and creativity.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-automation to-automation-light rounded-full flex items-center justify-center text-white font-bold">
@@ -200,7 +200,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                The ROI has been incredible. We've cut manual processing time by 75% and our team is happier focusing on high-value work instead of repetitive tasks.
+                The ROI has been incredible. We&apos;ve cut manual processing time by 75% and our team is happier focusing on high-value work instead of repetitive tasks.
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-to-br from-secondary to-automation rounded-full flex items-center justify-center text-white font-bold">
