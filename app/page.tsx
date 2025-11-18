@@ -73,20 +73,20 @@ export default function Home() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto pt-8 border-t border-gray-800/50">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">10K+</div>
-              <div className="text-gray-500 text-sm">Active Users</div>
+              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">100+</div>
+              <div className="text-gray-500 text-sm">Early Users</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">99.9%</div>
+              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">99.5%</div>
               <div className="text-gray-500 text-sm">Uptime</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">50M+</div>
+              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">10K+</div>
               <div className="text-gray-500 text-sm">Tasks Automated</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">24/7</div>
-              <div className="text-gray-500 text-sm">Support</div>
+              <div className="text-gray-500 text-sm">AI Available</div>
             </div>
           </div>
         </div>
@@ -160,10 +160,10 @@ export default function Home() {
               <span className="text-automation-300 font-semibold text-sm">TESTIMONIALS</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Loved by <span className="text-automation-light">10,000+</span> Teams
+              Trusted by <span className="text-automation-light">Early Adopters</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              See how businesses worldwide are transforming their operations with TaskJamm
+              See how early users are transforming their workflows with TaskJamm
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
