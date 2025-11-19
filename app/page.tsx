@@ -17,17 +17,11 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-300 hover:text-automation transition-all font-medium">
-                Features
-              </a>
               <a href="#testimonials" className="text-gray-300 hover:text-automation transition-all font-medium">
                 Testimonials
               </a>
               <a href="#contact" className="text-gray-300 hover:text-automation transition-all font-medium">
                 Contact
-              </a>
-              <a href="/app" className="text-gray-300 hover:text-automation transition-all font-medium">
-                Enter App
               </a>
             </div>
           </div>
@@ -57,19 +51,6 @@ export default function Home() {
             Save time and focus on what truly matters.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a href="/app" className="group relative overflow-hidden bg-automation text-white px-10 py-4 rounded-full hover:bg-automation-light transition-all text-lg font-bold shadow-2xl shadow-automation/50 hover:shadow-automation/70 hover:scale-105 inline-flex items-center justify-center gap-2">
-              <span className="relative z-10">Enter App</span>
-              <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
-            </a>
-            <button className="relative border-2 border-gray-700 text-gray-300 px-10 py-4 rounded-full hover:border-automation hover:text-automation hover:bg-automation/10 transition-all text-lg font-semibold hover:scale-105">
-              Watch Demo →
-            </button>
-          </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto pt-8 border-t border-gray-800/50">
             <div>
@@ -93,61 +74,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 px-6 bg-gray-900 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-automation/10 rounded-full blur-3xl"></div>
 
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-4 py-1.5 bg-automation/20 rounded-full border border-automation/30">
-              <span className="text-automation-300 font-semibold text-sm">FEATURES</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Everything You Need to <span className="text-automation-light">Automate</span>
-            </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Powerful features designed to streamline your workflows and boost productivity
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-automation/50 hover:shadow-2xl hover:shadow-automation/20 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-automation to-automation-light rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-automation/50">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-automation-light transition-colors">Smart Task Management</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Organize and prioritize tasks automatically with AI-powered intelligence tailored to your business needs.
-              </p>
-            </div>
-
-            <div className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-automation/50 hover:shadow-2xl hover:shadow-automation/20 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-automation to-automation-light rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-automation/50">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-automation-light transition-colors">Lightning Fast Execution</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Execute complex workflows in milliseconds with our optimized automation engine and cloud infrastructure.
-              </p>
-            </div>
-
-            <div className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-automation/50 hover:shadow-2xl hover:shadow-automation/20 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-automation to-automation-light rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-automation/50">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-automation-light transition-colors">Enterprise Security</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Bank-level encryption and industry-leading compliance standards keep your data safe and secure 24/7.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* Testimonials Section */}
@@ -239,6 +166,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-24 px-6 bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900 relative overflow-hidden">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-automation/10 rounded-full blur-3xl"></div>
+
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-4 py-1.5 bg-automation/20 rounded-full border border-automation/30">
+              <span className="text-automation-300 font-semibold text-sm">GET IN TOUCH</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Contact <span className="text-automation-light">TaskJamm</span>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
+            </p>
+          </div>
+
+          {/* Contact Form */}
+          <div className="max-w-2xl mx-auto">
+            <form className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all resize-none"
+                  placeholder="Tell us about your project or question..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full px-6 py-4 bg-automation hover:bg-automation-light text-white font-semibold rounded-lg transition-all transform hover:scale-[1.02] hover:shadow-lg hover:shadow-automation/30"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="relative bg-gray-900 border-t border-gray-800 py-16 px-6">
@@ -255,44 +255,17 @@ export default function Home() {
                 AI-powered workflow automation to streamline your business operations.
               </p>
               <div className="flex gap-3">
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-800 hover:bg-automation hover:text-white flex items-center justify-center transition-all border border-gray-700 hover:border-automation">
+                <a href="https://youtube.com/@taskjamm" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-800 hover:bg-[#FF0000] text-gray-400 hover:text-white flex items-center justify-center transition-all border border-gray-700 hover:border-[#FF0000]" aria-label="YouTube">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
-                <a href="#" className="w-9 h-9 rounded-full bg-gray-800 hover:bg-automation hover:text-white flex items-center justify-center transition-all border border-gray-700 hover:border-automation">
+                <a href="https://instagram.com/taskjamm" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-gray-800 hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#E1306C] hover:to-[#F77737] text-gray-400 hover:text-white flex items-center justify-center transition-all border border-gray-700 hover:border-[#E1306C]" aria-label="Instagram">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </a>
               </div>
-            </div>
-
-            <div>
-              <h4 className="text-white font-bold mb-4">Product</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><a href="#features" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">Features</a></li>
-                <li><a href="#testimonials" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">Testimonials</a></li>
-                <li><a href="#contact" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">Pricing</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-bold mb-4">Resources</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">Documentation</a></li>
-                <li><a href="#" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">API Reference</a></li>
-                <li><a href="#" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">Support</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-bold mb-4">Legal</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-automation-light transition-colors hover:translate-x-1 inline-block">Cookie Policy</a></li>
-              </ul>
             </div>
           </div>
 
@@ -308,11 +281,6 @@ export default function Home() {
                 </svg>
                 <span>by the TaskJamm Team</span>
               </div>
-            </div>
-            <div className="text-center">
-              <a href="mailto:taskjamm@gmail.com" className="text-gray-400 hover:text-automation-light transition-colors text-sm">
-                taskjamm@gmail.com
-              </a>
             </div>
           </div>
         </div>
