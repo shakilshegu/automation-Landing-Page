@@ -210,7 +210,7 @@ export default function Home() {
                     name="email"
                     required
                     className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all"
-                    placeholder="your@email.com"
+                    placeholder="taskjamm@gmail.com"
                   />
                 </div>
               </div>
