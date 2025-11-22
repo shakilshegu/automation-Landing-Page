@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 const anton = Anton({
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${anton.variable} ${montserrat.variable} antialiased`}>
         {children}
+         <Analytics />
       </body>
     </html>
   );
