@@ -3,7 +3,7 @@ import { google } from 'googleapis';
 
 // CORS headers configuration
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*', // Change this to specific domain(s) for better security
+  'Access-Control-Allow-Origin': 'http://maddy-ai.com',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
   'Access-Control-Max-Age': '86400',
