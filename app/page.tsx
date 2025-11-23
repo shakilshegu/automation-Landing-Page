@@ -160,8 +160,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { text: "As an early adopter, I&apos;m impressed with TaskJamm&apos;s potential. The AI automation is already helping me streamline my daily workflows.", name: "Sarah Johnson", role: "Marketing Specialist", initials: "SJ", accent: "border-pink-500" },
-              { text: "TaskJamm shows great promise for automating repetitive work. I&apos;m excited to see how it evolves and helps streamline my business operations.", name: "Michael Chen", role: "Small Business Owner", initials: "MC", accent: "border-cyan-500" },
+              { text: "As an early adopter, I'm impressed with TaskJamm's potential. The AI automation is already helping me streamline my daily workflows.", name: "Sarah Johnson", role: "Marketing Specialist", initials: "SJ", accent: "border-pink-500" },
+              { text: "TaskJamm shows great promise for automating repetitive work. I'm excited to see how it evolves and helps streamline my business operations.", name: "Michael Chen", role: "Small Business Owner", initials: "MC", accent: "border-cyan-500" },
               { text: "The interface is intuitive and the AI features are impressive for a new platform. Looking forward to seeing TaskJamm grow capabilities.", name: "Emily Parker", role: "Freelance Consultant", initials: "EP", accent: "border-purple-500" }
             ].map((t, i) => (
               <div key={i} className="group relative">
@@ -175,7 +175,7 @@ export default function Home() {
                         </svg>
                       ))}
                     </div>
-                    <p className="text-gray-300 mb-8 leading-relaxed font-light">&ldquo;{t.text}&rdquo;</p>
+                    <p className="text-gray-300 mb-8 leading-relaxed font-light">{t.text}</p>
                   </div>
                   <div className="flex items-center gap-4 pt-6 border-t border-white/5">
                     <div className={`w-10 h-10 rounded-lg border ${t.accent} flex items-center justify-center text-white font-bold bg-white/5`}>
