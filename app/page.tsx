@@ -160,8 +160,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { text: "As an early adopter, I'm impressed with TaskJamm's potential. The AI automation is already helping me streamline my daily workflows.", name: "Sarah Johnson", role: "Marketing Specialist", initials: "SJ", accent: "border-pink-500" },
-              { text: "TaskJamm shows great promise for automating repetitive work. I'm excited to see how it evolves and helps streamline my business operations.", name: "Michael Chen", role: "Small Business Owner", initials: "MC", accent: "border-cyan-500" },
+              { text: "As an early adopter, I&apos;m impressed with TaskJamm&apos;s potential. The AI automation is already helping me streamline my daily workflows.", name: "Sarah Johnson", role: "Marketing Specialist", initials: "SJ", accent: "border-pink-500" },
+              { text: "TaskJamm shows great promise for automating repetitive work. I&apos;m excited to see how it evolves and helps streamline my business operations.", name: "Michael Chen", role: "Small Business Owner", initials: "MC", accent: "border-cyan-500" },
               { text: "The interface is intuitive and the AI features are impressive for a new platform. Looking forward to seeing TaskJamm grow capabilities.", name: "Emily Parker", role: "Freelance Consultant", initials: "EP", accent: "border-purple-500" }
             ].map((t, i) => (
               <div key={i} className="group relative">
