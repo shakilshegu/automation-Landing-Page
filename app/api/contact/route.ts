@@ -1,20 +1,38 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
 
-// CORS headers configuration
-const corsHeaders = {
-  'Access-Control-Allow-Origin': 'http://maddy-ai.com',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-  'Access-Control-Max-Age': '86400',
-};
+// Allowed origins for CORS
+const allowedOrigins = [
+  'http://maddy-ai.com',
+  'https://maddy-ai.com',
+  'http://www.maddy-ai.com',
+  'https://www.maddy-ai.com',
+];
+
+// Function to get CORS headers based on request origin
+function getCorsHeaders(origin: string | null) {
+  const corsHeaders: Record<string, string> = {
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Access-Control-Max-Age': '86400',
+  };
+
+  if (origin && allowedOrigins.includes(origin)) {
+    corsHeaders['Access-Control-Allow-Origin'] = origin;
+  }
+
+  return corsHeaders;
+}
 
 // Handle OPTIONS request for CORS preflight
-export async function OPTIONS() {
-  return NextResponse.json({}, { headers: corsHeaders });
+export async function OPTIONS(request: NextRequest) {
+  const origin = request.headers.get('origin');
+  return NextResponse.json({}, { headers: getCorsHeaders(origin) });
 }
 
 export async function POST(request: NextRequest) {
+  const origin = request.headers.get('origin');
+  const corsHeaders = getCorsHeaders(origin);
   try {
     const body = await request.json();
     const { name, email, message } = body;
