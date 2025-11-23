@@ -1,6 +1,63 @@
+'use client';
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you! Your message has been sent successfully.',
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Something went wrong. Please try again.',
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950">
       {/* Navigation */}
@@ -52,22 +109,14 @@ export default function Home() {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto pt-8 border-t border-gray-800/50">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">100+</div>
-              <div className="text-gray-500 text-sm">Early Users</div>
+          <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto pt-8 border-t border-gray-800/50">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">2K</div>
+              <div className="text-gray-500 text-sm">customers</div>
             </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">99.5%</div>
-              <div className="text-gray-500 text-sm">Uptime</div>
-            </div>
-            <div>
+            <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">10K+</div>
               <div className="text-gray-500 text-sm">Tasks Automated</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-automation-light mb-1">24/7</div>
-              <div className="text-gray-500 text-sm">AI Available</div>
             </div>
           </div>
         </div>
@@ -185,7 +234,19 @@ export default function Home() {
 
           {/* Contact Form */}
           <div className="max-w-2xl mx-auto">
-            <form className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 space-y-6">
+            <form onSubmit={handleSubmit} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 space-y-6">
+              {submitStatus.type && (
+                <div
+                  className={`p-4 rounded-lg ${
+                    submitStatus.type === 'success'
+                      ? 'bg-green-500/20 border border-green-500/50 text-green-400'
+                      : 'bg-red-500/20 border border-red-500/50 text-red-400'
+                  }`}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -195,8 +256,11 @@ export default function Home() {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Your name"
                   />
                 </div>
@@ -208,9 +272,12 @@ export default function Home() {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all"
-                    placeholder="taskjamm@gmail.com"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    placeholder="your@gmail.com"
                   />
                 </div>
               </div>
@@ -222,18 +289,22 @@ export default function Home() {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   required
+                  disabled={isSubmitting}
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all resize-none"
+                  className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-automation focus:ring-1 focus:ring-automation transition-all resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Tell us about your project or question..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-4 bg-automation hover:bg-automation-light text-white font-semibold rounded-lg transition-all transform hover:scale-[1.02] hover:shadow-lg hover:shadow-automation/30"
+                disabled={isSubmitting}
+                className="w-full px-6 py-4 bg-automation hover:bg-automation-light text-white font-semibold rounded-lg transition-all transform hover:scale-[1.02] hover:shadow-lg hover:shadow-automation/30 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
