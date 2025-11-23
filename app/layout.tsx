@@ -20,6 +20,11 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "TaskJamm - AI-Powered Workflow Automation | Maddy AI",
   description: "Maddy AI intelligently manages, prioritizes, and executes routine multi-step tasks to streamline business operations and reduce manual work.",
+  icons: {
+    icon: '/icone.jpg',
+    shortcut: '/icone.jpg',
+    apple: '/icone.jpg',
+  },
 };
 
 export default function RootLayout({
