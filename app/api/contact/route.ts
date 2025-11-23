@@ -1,6 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
 
+// CORS headers configuration
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*', // Change this to specific domain(s) for better security
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Max-Age': '86400',
+};
+
+// Handle OPTIONS request for CORS preflight
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -10,7 +23,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -50,13 +63,13 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(
       { message: 'Contact form submitted successfully!' },
-      { status: 200 }
+      { status: 200, headers: corsHeaders }
     );
   } catch (error) {
     console.error('Error submitting to Google Sheets:', error);
     return NextResponse.json(
       { error: 'Failed to submit form. Please try again.' },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }
