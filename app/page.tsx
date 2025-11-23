@@ -175,7 +175,7 @@ export default function Home() {
                         </svg>
                       ))}
                     </div>
-                    <p className="text-gray-300 mb-8 leading-relaxed font-light">"{t.text}"</p>
+                    <p className="text-gray-300 mb-8 leading-relaxed font-light">&ldquo;{t.text}&rdquo;</p>
                   </div>
                   <div className="flex items-center gap-4 pt-6 border-t border-white/5">
                     <div className={`w-10 h-10 rounded-lg border ${t.accent} flex items-center justify-center text-white font-bold bg-white/5`}>
@@ -210,7 +210,7 @@ export default function Home() {
                 Ready to <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Automate?</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                Send a signal to our network. We'll analyze your requirements and establish a connection protocol immediately.
+                Send a signal to our network. We&apos;ll analyze your requirements and establish a connection protocol immediately.
               </p>
             </div>
 
